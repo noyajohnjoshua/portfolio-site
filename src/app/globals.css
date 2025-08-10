@@ -5,6 +5,8 @@
   --foreground: #e6e6e6;
 }
 
+html { scroll-behavior: smooth; }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -28,3 +30,21 @@ body {
 }
 
 .fade-in { animation: subtleFadeIn 240ms ease-out; }
+
+/* Utility: line clamp without plugin */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Hide scrollbars for custom carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
