@@ -8,12 +8,14 @@ export default function Hero() {
       <Container>
         <div className="pt-24 sm:pt-32 pb-12">
           <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight">
+            <span className="block text-white">Hi, I’m JJ.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400">
-              Coordinating people and campaigns.
+              I coordinate people and campaigns.
             </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-amber-300 to-rose-400">
-              Turning chaos into results.
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-300">
+              I turn chaos into results.
             </span>
+         
           </h1>
           <p className="mt-4 max-w-2xl text-base sm:text-lg text-white/70">
             I interned for a top creative agency, where I learned campaign coordination, managing Ad Standard Council-compliant storyboards and documents.

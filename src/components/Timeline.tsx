@@ -35,14 +35,63 @@ const weeks: WeekEntry[] = [
     actionResult:
       "Contributed ideas in pre-production meetings, strengthened presentation skills, and adapted workflows for dual responsibilities.",
   },
-  // Placeholders for Weeks 4–10 (adjust later)
-  { week: 4, title: "", challenge: "TBD", actionResult: "TBD" },
-  { week: 5, title: "", challenge: "TBD", actionResult: "TBD" },
-  { week: 6, title: "", challenge: "TBD", actionResult: "TBD" },
-  { week: 7, title: "", challenge: "TBD", actionResult: "TBD" },
-  { week: 8, title: "", challenge: "TBD", actionResult: "TBD" },
-  { week: 9, title: "", challenge: "TBD", actionResult: "TBD" },
-  { week: 10, title: "", challenge: "TBD", actionResult: "TBD" },
+  // Weeks 4–10
+  {
+    week: 4,
+    title: "Rapid Turnarounds",
+    challenge:
+      "Delivering urgent storyboard revisions alongside ongoing tracker management.",
+    actionResult:
+      "Coordinated closely with creatives to fast-track revisions without compromising accuracy, meeting tight deadlines.",
+  },
+  {
+    week: 5,
+    title: "Gaining Momentum",
+    challenge:
+      "Balancing multiple projects while demonstrating independence in task handling.",
+    actionResult:
+      "Handled tasks with minimal supervision, showing mastery of tracker systems and storyboard requirements.",
+  },
+  {
+    week: 6,
+    title: "Expanding Responsibilities",
+    challenge:
+      "Managing increased tracker movements from spilled-over content while taking on new research tasks.",
+    actionResult:
+      "Produced a competitive scan for a tagline while ensuring movement tracking stayed up to date and accurate.",
+  },
+  {
+    week: 7,
+    title: "Research for Impact",
+    challenge:
+      "With storyboard tasks slowing, shifting focus to campaign research for award submissions.",
+    actionResult:
+      "Identified and compiled a list of relevant professionals to provide valuable insights and data for the campaign.",
+  },
+  {
+    week: 8,
+    title: "Process Improvement",
+    challenge:
+      "Tracking overspilled content efficiently without creating bottlenecks for the team.",
+    actionResult:
+      "Solved feature gaps in the tracker, streamlining it for easier client and internal tracking; prepared ASC documents using client-provided test data.",
+  },
+  {
+    week: 9,
+    title: "Closing Loose Ends",
+    challenge:
+      "Ensuring no oversights in remaining tracker items during a slow period.",
+    actionResult:
+      "Reviewed and confirmed all movements from previous months, ensuring full resolution or proper handover.",
+  },
+  {
+    week: 10,
+    title: "Finishing Strong",
+    challenge:
+      "Wrapping up internship with final tracker checks and ensuring smooth transition.",
+    actionResult:
+      "Audited the live tracker for completeness, documented changes for continuity, and delivered a short farewell speech during the intern send-off.",
+  },
 ];
 
 type BadgeVariant = "challenge" | "actionResult";
