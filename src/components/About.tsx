@@ -9,11 +9,14 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="sm:col-span-2 text-white/70 text-sm leading-6 space-y-4">
             <p>
-              I worked hands-on coordinating campaigns and keeping teams in sync — from creative to accounts to clients.
-              My focus was reducing friction at handover points and making sure trackers told the real story.
+              I worked hands-on coordinating campaigns and keeping teams in sync, from creative to accounts to clients.
+              My focus was reducing friction at key points and making sure that campaigns are on track.
             </p>
             <p>
-              I prioritize clarity, consistent updates, and thoughtful process improvements that help everyone move faster.
+              I prioritize clarity, consistency, creating calculated risks, and thoughtful process improvements that help everyone move faster.
+              <span className="block font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-300 to-emerald-300">
+                Ultimately serving the client and the team.
+              </span>
             </p>
           </div>
           <div className="sm:col-span-1">

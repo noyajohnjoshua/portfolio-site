@@ -18,15 +18,18 @@ export default function Hero() {
          
           </h1>
           <p className="mt-4 max-w-2xl text-base sm:text-lg text-white/70">
-            I interned for a top creative agency, where I learned campaign coordination, managing Ad Standard Council-compliant storyboards and documents.
+            I interned for a top creative agency, where I learned key skills in becoming an effective Accounts Manager 
           </p>
           <p className="mt-3 max-w-2xl text-base sm:text-lg text-white/70">
-            Tracking campaign movements, I streamlined workflows, ensured clear handovers, maintained pace, and kept communication accurate to keep deliverables on track.
+            I have mastered tracking campaign movements, optimizing workflows, maintaining quick pace, and keeping communication accurate to keep deliverables on track.
           </p>
  
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-200">
               OPEN TO WORK
+            </span>
+            <span className="inline-flex items-center rounded-full border border-sky-400/25 bg-sky-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-sky-200">
+              AGENCY TRAINED
             </span>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3 text-sm">

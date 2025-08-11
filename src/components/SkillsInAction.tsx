@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useRef } from "react";
+import React, { useRef } from "react";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 
@@ -44,7 +44,7 @@ const stories: Story[] = [
     challenge:
       "Identifying credible professionals to provide authoritative opinions and data for a high-visibility award campaign.",
     action:
-      "Sourced and vetted potential experts, ensuring their relevance, credibility, and alignment with campaign goals.",
+      "Sourced and gathered potential experts, ensuring their relevance, credibility, and alignment with campaign goals.",
     impact:
       "Equipped the team with high-quality contacts, increasing the campaign’s legitimacy and chances for recognition.",
   },
@@ -66,41 +66,56 @@ function Badge({ children, variant }: { children: React.ReactNode; variant: Badg
 export default function SkillsInAction() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const highlights = useMemo(
-    () => [
-      "ASC",
-      "ASC-compliant",
-      "storyboards",
-      "tracker",
-      "standardized",
-      "compliance",
-      "single source of truth",
-      "competitive",
-      "scan",
-      "research",
-      "experts",
-      "approvals",
-      "workflows",
-    ],
-    []
-  );
-
-  function highlightWith(accentTextClass: string, text: string) {
-    const escaped = highlights
+  function highlightCustom(phrases: string[], accentTextClass: string, text: string) {
+    if (!phrases || phrases.length === 0) return text;
+    const escaped = phrases
       .slice()
       .sort((a, b) => b.length - a.length)
       .map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
     if (escaped.length === 0) return text;
     const regex = new RegExp(`(${escaped.join("|")})`, "gi");
     const parts = text.split(regex);
+    const lower = phrases.map((p) => p.toLowerCase());
     return parts.map((part, idx) =>
-      highlights.map((h) => h.toLowerCase()).includes(part.toLowerCase()) ? (
+      lower.includes(part.toLowerCase()) ? (
         <span key={idx} className={accentTextClass}>{part}</span>
       ) : (
         <React.Fragment key={idx}>{part}</React.Fragment>
       )
     );
   }
+
+  const storyHighlights = [
+    {
+      challenge: ["incomplete or non-compliant materials"],
+      action: ["supporting claim", "documents"],
+      impact: ["minimized compliance issues", "faster approvals"],
+    },
+    {
+      challenge: ["inconsistent movement updates", "reduced visibility and trust"],
+      action: [
+        "redesigned and standardized the tracker format without disrupting existing workflows",
+      ],
+      impact: ["significantly improved accuracy", "reliable single source of truth"],
+    },
+    {
+      challenge: ["competitive scan to assess the uniqueness"],
+      action: [
+        "researched industry trends",
+        "competitor usage",
+        "market positioning",
+      ],
+      impact: ["data-driven insights"],
+    },
+    {
+      challenge: [
+        "identifying credible professionals",
+        "provide authoritative opinions",
+      ],
+      action: ["Sourced and gathered potential experts"],
+      impact: ["high-quality contacts"],
+    },
+  ];
 
   // Neutral borders; color only for keyword highlights and badges
 
@@ -147,7 +162,7 @@ export default function SkillsInAction() {
             className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory touch-pan-x px-10"
             aria-label="Skills in action carousel"
           >
-            {stories.map((s) => {
+            {stories.map((s, idx) => {
               return (
                 <div
                   key={s.title}
@@ -158,15 +173,15 @@ export default function SkillsInAction() {
                   <div className="mt-3 space-y-3 text-sm text-white/70 text-left">
                     <div>
                       <Badge variant="challenge">CHALLENGE</Badge>
-                      <p className="mt-1">{highlightWith("text-red-300", s.challenge)}</p>
+                      <p className="mt-1">{highlightCustom(storyHighlights[idx]?.challenge ?? [], "text-red-300", s.challenge)}</p>
                     </div>
                     <div>
                       <Badge variant="action">ACTION</Badge>
-                      <p className="mt-1">{highlightWith("text-sky-300", s.action)}</p>
+                      <p className="mt-1">{highlightCustom(storyHighlights[idx]?.action ?? [], "text-sky-300", s.action)}</p>
                     </div>
                     <div>
                       <Badge variant="impact">IMPACT</Badge>
-                      <p className="mt-1">{highlightWith("text-emerald-300", s.impact)}</p>
+                      <p className="mt-1">{highlightCustom(storyHighlights[idx]?.impact ?? [], "text-emerald-300", s.impact)}</p>
                     </div>
                   </div>
                 </div>

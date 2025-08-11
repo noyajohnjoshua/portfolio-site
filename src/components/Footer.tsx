@@ -8,7 +8,9 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div className="text-white/80 font-medium">Get in touch</div>
-            <p className="text-sm text-white/60 mt-1">Simple: email, LinkedIn, optional CV download.</p>
+            <p className="text-sm text-white/60 mt-1">
+              I&apos;m currently open to work, feel free to reach out!
+            </p>
           </div>
           <div className="flex flex-wrap items-center justify-end gap-3 gap-y-2 text-sm w-full sm:w-auto">
             <a
