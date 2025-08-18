@@ -8,21 +8,15 @@ export default function Hero() {
       <Container>
         <div className="pt-24 sm:pt-32 pb-12">
           <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight">
-            <span className="block text-white">Hi, I’m JJ.</span>
+            <span className="block text-white">Hi, I'm JJ.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400">
-              I coordinate people and campaigns.
+              I design strategies that connect.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-300">
-              I turn chaos into results.
+            I create campaigns that deliver.
             </span>
          
           </h1>
-          <p className="mt-4 max-w-2xl text-base sm:text-lg text-white/70">
-            I interned for a top creative agency, where I learned key skills in becoming an effective Accounts Manager 
-          </p>
-          <p className="mt-3 max-w-2xl text-base sm:text-lg text-white/70">
-            I have mastered tracking campaign movements, optimizing workflows, maintaining quick pace, and keeping communication accurate to keep deliverables on track.
-          </p>
  
           <div className="mt-6 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-200">
@@ -30,6 +24,15 @@ export default function Hero() {
             </span>
             <span className="inline-flex items-center rounded-full border border-sky-400/25 bg-sky-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-sky-200">
               AGENCY TRAINED
+            </span>
+            <span className="inline-flex items-center rounded-full border border-purple-400/25 bg-purple-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-purple-200">
+              FULL SERVICE CREATIVE
+            </span>
+            <span className="inline-flex items-center rounded-full border border-amber-400/25 bg-amber-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-amber-200">
+              RESULTS DRIVEN
+            </span>
+            <span className="inline-flex items-center rounded-full border border-rose-400/25 bg-rose-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-rose-200">
+              DATA DRIVEN
             </span>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3 text-sm">

@@ -18,7 +18,7 @@ const weeks: WeekEntry[] = [
     challenge:
       "Adapting quickly to internal systems and live client decks for tracking social media movements.",
     actionResult:
-      "Learned the tracker process, edited ASC-compliant storyboards, and earned trust through timely, accurate submissions.",
+      "Mastered the tracker process, edited ASC-compliant storyboards, and earned trust through timely, accurate submissions.",
   },
   {
     week: 2,
@@ -29,13 +29,12 @@ const weeks: WeekEntry[] = [
   },
   {
     week: 3,
-    title: "Expanding My Role",
+    title: "Expanding Strategic Role",
     challenge:
       "Balancing core duties with new involvement in activation strategy and creative brainstorming.",
     actionResult:
       "Contributed ideas in pre-production meetings, strengthened presentation skills, and adapted workflows for dual responsibilities.",
   },
-  // Weeks 4–10
   {
     week: 4,
     title: "Rapid Turnarounds",
@@ -88,9 +87,9 @@ const weeks: WeekEntry[] = [
     week: 10,
     title: "Finishing Strong",
     challenge:
-      "Wrapping up internship with final tracker checks and ensuring smooth transition.",
+      "Wrapping up with final tracker checks and ensuring smooth transition.",
     actionResult:
-      "Audited the live tracker for completeness, documented changes for continuity, and delivered a short farewell speech during the intern send-off.",
+      "Audited the live tracker for completeness, documented changes for continuity, and delivered a short farewell speech during the send-off.",
   },
 ];
 
@@ -109,11 +108,11 @@ function Badge({ children, variant }: { children: React.ReactNode; variant: Badg
 export default function Timeline() {
   const GROUPS = useMemo(
     () => [
-      { id: "1-2", title: "Laying the Groundwork", weeks: [1, 2] },
-      { id: "3-4", title: "Expanding My Role", weeks: [3, 4] },
-      { id: "5-6", title: "Mastering the Workflow", weeks: [5, 6] },
-      { id: "7-8", title: "Driving Process Improvements", weeks: [7, 8] },
-      { id: "9-10", title: "Finishing Strong", weeks: [9, 10] },
+      { id: "1-2", title: "Foundation & Systems Mastery", weeks: [1, 2] },
+      { id: "3-4", title: "Strategic Expansion & Execution", weeks: [3, 4] },
+      { id: "5-6", title: "Operational Excellence", weeks: [5, 6] },
+      { id: "7-8", title: "Innovation & Process Optimization", weeks: [7, 8] },
+      { id: "9-10", title: "Leadership & Transition", weeks: [9, 10] },
     ],
     []
   );
@@ -174,8 +173,8 @@ export default function Timeline() {
     <Container>
       <Section
         id="timeline"
-        title="Week-by-Week Timeline"
-        subtitle="Use the buttons to view specific week ranges."
+        title="Agency Foundation"
+        subtitle="Use the buttons to view specific development phases."
       >
         <div className="w-full">
         <div className="relative">
@@ -219,7 +218,7 @@ export default function Timeline() {
             .map((w) => (
               <li key={w.week} className="rounded-lg border border-white/10 bg-white/[0.03] p-4 h-full">
                 <div className="text-white/90 font-medium">
-                  {`Week ${w.week}${w.title ? `: ${w.title}` : ""}`}
+                  {w.title}
                 </div>
                 <div className="mt-3 space-y-3 text-sm text-white/70 text-left flex flex-col">
                   <div>
