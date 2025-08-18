@@ -256,22 +256,6 @@ export default function SkillsInAction() {
     },
   ];
 
-  function scrollByViewport(direction: 1 | -1) {
-    const node = scrollRef.current;
-    if (!node) return;
-    node.scrollBy({ left: direction * node.clientWidth, behavior: "smooth" });
-  }
-
-  function nextStory() {
-    setActiveStoryIndex((prev) => (prev + 1) % stories.length);
-    setActiveMediaIndex(0); // Reset media index when changing stories
-  }
-
-  function prevStory() {
-    setActiveStoryIndex((prev) => (prev - 1 + stories.length) % stories.length);
-    setActiveMediaIndex(0); // Reset media index when changing stories
-  }
-
   function nextMedia() {
     const currentStory = stories[activeStoryIndex];
     if (currentStory.media) {
@@ -410,7 +394,7 @@ export default function SkillsInAction() {
                                         iframe.style.height = `${newHeight}px`;
                                       }
                                     }
-                                  } catch (error) {
+                                  } catch {
                                     // Cross-origin restrictions may prevent access
                                     console.log('Could not access iframe content for sizing');
                                   }

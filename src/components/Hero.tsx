@@ -8,7 +8,7 @@ export default function Hero() {
       <Container>
         <div className="pt-24 sm:pt-32 pb-12">
           <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight">
-            <span className="block text-white">Hi, I'm JJ.</span>
+            <span className="block text-white">Hi, I&apos;m JJ.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400">
               I design strategies that connect.
             </span>
