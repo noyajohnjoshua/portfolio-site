@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollHandler from "@/components/ScrollHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full bg-[#0b0b0b] text-white`}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if (typeof window !== 'undefined') {
+                  if ('scrollRestoration' in window.history) {
+                    window.history.scrollRestoration = 'manual';
+                  }
+                  window.scrollTo(0, 0);
+                }
+              })();
+            `,
+          }}
+        />
+        <ScrollHandler />
         {children}
       </body>
     </html>
