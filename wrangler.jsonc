@@ -23,5 +23,15 @@
   "r2_buckets": [],
   "images": {
     "binding": "IMAGES"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "jj-track-test.site",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.jj-track-test.site",
+      "custom_domain": true
+    }
+  ]
 }
